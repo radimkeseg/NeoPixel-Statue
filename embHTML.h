@@ -22,7 +22,7 @@ const char PAGE_INDEX[] PROGMEM = R"=====(
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>NeoPixel XmasTree</title>
+	<title>NeoPixel Statue</title>
 
 <script>
   window.onload = function(){}
@@ -42,7 +42,7 @@ const char PAGE_INDEX[] PROGMEM = R"=====(
 </style>
 
 <body>
-<h1>NeoPixel xMasTree</h1>
+<h1>NeoPixel Statue</h1>
 <p>
 Neopixel Statue with an ESP8266 IoT device
 <p/>
