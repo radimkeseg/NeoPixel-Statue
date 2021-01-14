@@ -58,11 +58,11 @@ ESP8266HTTPUpdateServer httpUpdater;
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 //   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(20, /*NEOPIXEL_DATA_IN_PIN*/ 2, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(3, /*NEOPIXEL_DATA_IN_PIN*/ 2, NEO_GRB + NEO_KHZ800);
 
 CustomSettings cs; 
 
-Matrix matrix(&strip, 2);
+Matrix matrix(&strip, 1);
 EfxRainbow efx_rainbow(&matrix);
 EfxSpike efx_spike(&matrix);
 EfxSpiral efx_spiral(&matrix);
@@ -188,8 +188,11 @@ void loop() {
 
   
   // todo effect by the full hour ... later
-  if(matrix.getMinsInt() == 0 && matrix.getSecsInt()<30){
+  if( matrix.getMinsInt() == 0 && matrix.getSecsInt()<20){
     efx_spike.Show(); 
+    clear = false;
+  }else if( matrix.getMinsInt() == 15 && matrix.getSecsInt()<5 || matrix.getMinsInt() == 30 && matrix.getSecsInt()<10 || matrix.getMinsInt() == 45 && matrix.getSecsInt()<15){
+    efx_spiral.Show(); 
     clear = false;
   }else{
     efx_rainbow.Show();

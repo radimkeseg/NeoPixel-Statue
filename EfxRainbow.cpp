@@ -23,12 +23,14 @@ SOFTWARE.
 void EfxRainbow::Show(boolean clear_background, boolean mix_colors){
   if(matrix==NULL) return;
 
+  int size = /*matrix->numPixels()*/20;
+
   if(j>255) j=0;
   for(int i=0; i< matrix->numPixels(); i++) {
     if(i==1)
-      matrix->setPixel(matrix->numPixels()+i, Adafruit_NeoPixel::Color(0,0,0));
+      matrix->setPixel(i, Adafruit_NeoPixel::Color(0,0,0));
     else
-      matrix->setPixel(matrix->numPixels()+i, ITimer::wheel(((i * 256 / matrix->numPixels()) + j) & 255));
+      matrix->setPixel(i, ITimer::wheel(((i * 256 / size) + j) & 255));
   }  
   j++;  
 }

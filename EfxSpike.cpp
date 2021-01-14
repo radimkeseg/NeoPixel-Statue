@@ -23,7 +23,7 @@ SOFTWARE.
 void EfxSpike::Show(boolean clear_background, boolean mix_colors){
   if(matrix==NULL) return;
 
-  if( j>= (matrix->numPixelsInRow()) && incr>0 || j<=0 && incr<0  ) incr*=-1;
+  if( j>=(matrix->numPixelsInRow()) && incr>0 || j<=0 && incr<0  ) incr*=-1;
   j+=incr; if(j<0) j=0;
   for(int y=0;y<matrix->numRows();y++){
     for(int x=0;x<matrix->numPixelsInRow();x++){
