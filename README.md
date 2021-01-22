@@ -1,6 +1,6 @@
-# ESP8266-NeoPixel-XmasTree
+# ESP8266-NeoPixel-Statue
 
-Neopixel homemade Matrix conic Display - animated XmasTree
+Neopixel homemade animated status with clock
 
 ## Setup
 
@@ -11,4 +11,4 @@ Neopixel homemade Matrix conic Display - animated XmasTree
 
 ## Components
 * Esp8266 ESP-01 http://www.ebay.com/itm/1-2-5PCS-ESP8266-ESP-01-Serial-WIFI-Wireless-Transceiver-Wireless-Module-AP-STA-/191995377029?var=&hash=item2cb3d0f585:m:m0s8RCLsHPdb53jvkd0ZbWg
-* NeoPixel Ring 60 RGB http://www.ebay.com/itm/Ring-Wall-Clock-60-X-Ultra-Bright-WS2812-5050-RGB-LED-Lamp-Panel-For-Arduino-/201650011252?hash=item2ef346fc74:g:4VQAAOSw-itXtyq3
+* NeoPixel stripe or 3 times WS2812 5050 elements
